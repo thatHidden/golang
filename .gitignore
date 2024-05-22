@@ -1,0 +1,4 @@
+static/
+docker-compose.yml
+Dockerfile
+.env

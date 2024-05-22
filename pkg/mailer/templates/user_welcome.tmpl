@@ -1,0 +1,26 @@
+{{define "subject"}}Welcome to GorodeBids!{{end}}
+{{define "plainBody"}}
+Hi, {{.user.Username}} !
+Thanks for signing up for a GorodeBids account. We're excited to have you on board!
+Please verify your account with this link:
+127.0.0.1:8000/user/activate/{{.token.Plaintext}}
+Thanks,
+The GorodeBids Team
+{{end}}
+{{define "htmlBody"}}
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p>Hi,{{.user.Username}} </p>
+<p>Thanks for signing up for a GorodeBids account. We're excited to have you on board!</p>
+<p>Please verify your account with this link:</p>
+<p>127.0.0.1:8000/user/activate/{{.token.Plaintext}}</p>
+<p>Thanks,</p>
+<p>The GorodeBids Team</p>
+</body>
+</html>
+{{end}}
